@@ -23,6 +23,39 @@
         ],
         "description": "Bootstrap plantilla de inicio HTML"
     },
+    "Vuetify plantilla de inicio": {
+        "prefix": "html:vuetify",
+        "body": [
+            "<!DOCTYPE html>",
+            "<html lang=\"es\">",
+            "<head>",
+            "\t<link href=\"https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,,900\" rel=\"stylesheet\">",
+            "\t<link href=\"https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.,min.css\" rel=\"stylesheet\">",
+            "\t<link href=\"https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.css\" ,rel=\"stylesheet\">",
+            "\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, ,maximum-scale=1, user-scalable=no, minimal-ui\">",
+            "</head>",
+            "<body>",
+            "\t<div id=\"app\">",
+            "\t\t<v-app>",
+            "\t\t\t<v-content>",
+            "\t\t\t\t<v-container>Hola Mundo</v-container>",
+            "\t\t\t</v-content>",
+            "\t\t</v-app>",
+            "\t</div>",
+            "\t",
+            "\t<script src=\"https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js\"></script>",
+            "\t<script src=\"https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js\"></script>",
+            "\t<script>",
+            "\t\tnew Vue({",
+            "\t\tel: '#app',",
+            "\t\tvuetify: new Vuetify(),",
+            "\t})",
+            "\t</script>",
+            "</body>",
+            "</html>"
+        ],
+        "description": "Vuetify plantilla de inicio HTML"
+    },
     // FIREBASE: CDN
     "Firebase all products CDN": {
         "prefix": "firebase-cdn-all",
