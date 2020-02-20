@@ -280,5 +280,52 @@
             "\t});"
         ],
         "description": "Firebase Firestore escuchar múltiples documentos en una colección y mira cambios entre instantáneas"
+    },
+    // Google FIREBASE: storage
+    "Firebase Storage agrega una referencia ": {
+        "prefix": "storageRef",
+        "body": "var storageRef = storage.ref();",
+        "description": "Firebase Firestore agrega una referencia"
+    },
+    "Firebase Storage crear una referencia secundaria": {
+        "prefix": "imagesRef",
+        "body": "var imagesRef = storageRef.child('images');",
+        "description": "Firebase Storage crear una referencia secundaria"
+    },
+    "Firebase Storage carga con monitoreo de progreso y manejo de errores": {
+        "prefix": "storageUploadTask",
+        "body": [
+            "var uploadTask = storageRef.child(\"images/imagen.jpg\").put(file);",
+            "",
+            "uploadTask.on(",
+            "\t\"state_changed\",",
+            "\t(snapshot) => {",
+            "\t\tvar progreso = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;",
+            "\t\tconsole.log(\"Subido al \" + progreso + \"%\");",
+            "\t},",
+            "\t(error) => {},",
+            "\t() => {",
+            "\t\tuploadTask.snapshot.ref.getDownloadURL().then((downloadURL) => {",
+            "\t\t\tconsole.log(\"Archivo disponible en \", downloadURL);",
+            "\t\t});",
+            "\t}",
+            ");"
+        ],
+        "description": "Firebase Storage escucha los cambios de estado, los errores y la finalización de la carga"
+    },
+    "Firebase Storage cree una referencia al archivo para elimina": {
+        "prefix": "storageDeleteRef",
+        "body": [
+            "var desertRef = storageRef.child(\"images/imagen.jpg\");",
+            "",
+            "desertRef.delete()",
+            "\t.then(() => {",
+            "\t\t",
+            "\t})",
+            "\t.catch((error) => {",
+            "\t\t",
+            "\t});"
+        ],
+        "description": "Firebase Storage cree una referencia al archivo para elimina"
     }
 }
