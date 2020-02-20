@@ -1,1 +1,48 @@
-{}
+{
+    // Google FIREBASE: Iniciando
+    "Firebase initialize ": {
+        "prefix": "init:firebase",
+        "body": [
+            "import * as firebase from \"firebase/app\";",
+            "",
+            "import \"firebase/auth\";",
+            "import \"firebase/firestore\";",
+            "import \"firebase/functions\";",
+            "import \"firebase/storage\";",
+            "",
+            "const firebaseConfig = {",
+            "\tapiKey: \"api-key\",",
+            "\tauthDomain: \"project-id.firebaseapp.com\",",
+            "\tdatabaseURL: \"https://project-id.firebaseio.com\",",
+            "\tprojectId: \"project-id\",",
+            "\tstorageBucket: \"project-id.appspot.com\",",
+            "\tmessagingSenderId: \"sender-id\",",
+            "\tappId: \"app-id\",",
+            "\tmeasurementId: \"G-measurement-id\"",
+            "};",
+            "",
+            "firebase.initializeApp(firebaseConfig);"
+        ],
+        "description": "Inicialización de Firebase"
+    },
+    "Firebase Authentication initialize ": {
+        "prefix": "init:auth",
+        "body": "const db = firebase.auth();",
+        "description": "Inicialización de Firebase Authentication"
+    },
+    "Firebase Firestore initialize ": {
+        "prefix": "init:firestore",
+        "body": "const db = firebase.firestore();",
+        "description": "Inicialización de Firebase Firestore"
+    },
+    "Firebase Storage initialize ": {
+        "prefix": "init:storage",
+        "body": "const storage = firebase.storage();",
+        "description": "Inicialización de Firebase Storage"
+    },
+    "Firebase Functions initialize ": {
+        "prefix": "init:functions",
+        "body": "const storage = firebase.functions();",
+        "description": "Inicialización de Firebase Functions"
+    }
+}
