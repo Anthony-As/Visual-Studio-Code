@@ -44,5 +44,104 @@
         "prefix": "init:functions",
         "body": "const storage = firebase.functions();",
         "description": "Inicialización de Firebase Functions"
+    },
+    // Google FIREBASE: Auth
+    "Firebase Auth crear usuario con correo electrónico y contraseña ": {
+        "prefix": "auth.createUserWithEmailAndPassword",
+        "body": [
+            "auth.createUserWithEmailAndPassword(email, password)",
+            "\t.then((result) => {",
+            "\t\t",
+            "\t})",
+            "\t.catch((error) => {",
+            "\t\t",
+            "\t});"
+        ],
+        "description": "Firebase Auth crea un usuario con correo electrónico y contraseña"
+    },
+    "Firebase Auth inicia sesión con correo electrónico y contraseña ": {
+        "prefix": "auth.signInWithEmailAndPassword",
+        "body": [
+            "auth.signInWithEmailAndPassword(email, password)",
+            "\t.then((result) => {",
+            "\t\t",
+            "\t})",
+            "\t.catch((error) => {",
+            "\t\t",
+            "\t});"
+        ],
+        "description": "Firebase Auth inicia sesión con correo electrónico y contraseña"
+    },
+    "Firebase Auth en estado de autenticación cambiado ": {
+        "prefix": "auth.onAuthStateChanged",
+        "body": [
+            "auth.onAuthStateChanged((user) => {",
+            "\tif (user) {",
+            "\t\tvar displayName = user.displayName;",
+            "\t\tvar email = user.email;",
+            "\t\tvar emailVerified = user.emailVerified;",
+            "\t\tvar photoURL = user.photoURL;",
+            "\t\tvar isAnonymous = user.isAnonymous;",
+            "\t\tvar uid = user.uid;",
+            "\t\tvar providerData = user.providerData;",
+            "\t} else {",
+            "\t\t",
+            "\t}",
+            "});"
+        ],
+        "description": "Firebase Auth en estado de autenticación cambiado"
+    },
+    "Firebase Auth cerrar sesión ": {
+        "prefix": "auth.signOut",
+        "body": [
+            "auth.signOut()",
+            "\t.then(() => {",
+            "\t\t",
+            "\t}).catch((error) => {",
+            "\t\t",
+            "\t});"
+        ],
+        "description": "Cerrar sesión de Firebase Auth"
+    },
+    "Firebase Auth obtiene el usuario actual ": {
+        "prefix": "auth.currentUser",
+        "body": ["const user = firebase.auth().currentUser;"],
+        "description": "Firebase Auth obtiene usuario actual"
+    },
+    "Firebase Auth envía un correo electrónico de verificación al usuario actual ": {
+        "prefix": "auth.currentUser.sendEmailVerification",
+        "body": [
+            "auth.currentUser.sendEmailVerification()",
+            "\t.then(() => {",
+            "\t\t",
+            "\t}).catch((error) => {",
+            "\t\t",
+            "\t});"
+        ],
+        "description": "Firebase Auth envía un correo electrónico de verificación al usuario actual"
+    },
+    "Crear un proveedor de autenticación de Google Firebase Auth ": {
+        "prefix": "auth.GoogleAuthProvider",
+        "body": ["const provider = new firebase.auth.GoogleAuthProvider();"],
+        "description": "Crear un proveedor de autenticación de Google Firebase Auth"
+    },
+    "Crear un proveedor de autenticación de Facebook Firebase Auth ": {
+        "prefix": "auth.FacebookAuthProvider",
+        "body": ["const provider = new firebase.auth.FacebookAuthProvider();"],
+        "description": "Crear un proveedor de autenticación de Facebook Firebase Auth"
+    },
+    "Firebase Auth inicia sesión con Popup ": {
+        "prefix": "auth.signInWithPopup",
+        "body": [
+            "auth.signInWithPopup(provider)",
+            "\t.then((result) => {",
+            "\t\tconst token = result.credential.accessToken;",
+            "\t\tconst user = result.user;",
+            "\t})",
+            "\t.catch((error) => {",
+            "\t\t",
+            "\t});"
+        ],
+        "description": "Iniciar sesión en Firebase Auth con Popup"
     }
 }
