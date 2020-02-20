@@ -143,5 +143,142 @@
             "\t});"
         ],
         "description": "Iniciar sesión en Firebase Auth con Popup"
+    },
+    // Google FIREBASE: Firestore
+    "Firebase Firestore agrega un documento ": {
+        "prefix": "db.add",
+        "body": [
+            "db.collection(\"${1:collectionName}\")",
+            "\t.add(${2:obj})",
+            "\tthen((docRef) => {",
+            "\t\t",
+            "\t})",
+            "\t.catch((error) => {",
+            "\t\t",
+            "\t});"
+        ],
+        "description": "Firebase Firestore agrega un documento"
+    },
+    "Firebase Firestore estableció un documento ": {
+        "prefix": "db.set",
+        "body": [
+            "db.doc(\"${1:collectionName}/${2:docName}\")",
+            "\t.set(${3:obj})",
+            "\t.then(() => {",
+            "\t\t",
+            "\t})",
+            "\t.catch((error) => {",
+            "\t\t",
+            "\t})"
+        ],
+        "description": "Firebase Firestore estableció un documento"
+    },
+    "Firebase Firestore actualiza un documento ": {
+        "prefix": "db.update",
+        "body": [
+            "db.doc(\"${1:collectionName}/${2:docName}\")",
+            "\t.update(${3:obj})",
+            "\t.then(() => {",
+            "\t\t",
+            "\t})",
+            "\t.catch((error) => {",
+            "\t\t",
+            "\t})"
+        ],
+        "description": "Firebase Firestore actualiza un documento"
+    },
+    "Firebase Firestore elimina un documento ": {
+        "prefix": "db.delete",
+        "body": [
+            "db.doc(\"${1:collectionName}/${2:docName}\")",
+            "\t.delete()",
+            "\t.then(() => {",
+            "\t\t",
+            "\t})",
+            "\t.catch((error) => {",
+            "\t\t",
+            "\t})"
+        ],
+        "description": "Firebase Firestore borra un documento"
+    },
+    "Firebase Firestore obtiene una colección ": {
+        "prefix": "db.getCollection",
+        "body": [
+            "db.collection(\"${1:collectionName}\")",
+            "\t.get()",
+            "\t.then((querySnapshot) => {",
+            "\t\tquerySnapshot.forEach((doc) => {",
+            "\t\t\t",
+            "\t\t});",
+            "\t})",
+            "\t.catch((error) => {",
+            "\t\t",
+            "\t})"
+        ],
+        "description": "Firebase Firestore obtiene colección por una sola vez"
+    },
+    "Firebase Firestore obtiene la colección por pedido ": {
+        "prefix": "db.getCollectionByOrder",
+        "body": [
+            "db.collection('${1:collectionName}')",
+            "\t.orderBy(\"${2:id}\", \"${3:desc}\")",
+            "\t.get()",
+            "\t.then((querySnapshot) => {",
+            "\t\tquerySnapshot.forEach((doc) => {",
+            "\t\t\t",
+            "\t\t});",
+            "\t})",
+            "\t.catch((error) => {",
+            "\t\t",
+            "\t})"
+        ],
+        "description": "Firebase Firestore obtiene la colección por pedido"
+    },
+    "Firebase Firestore obtiene un documento ": {
+        "prefix": "db.getDoc",
+        "body": [
+            "db.doc(\"${1:collectionName}/${2:docName}\")",
+            "\t.get()",
+            "\t.then((doc) => {",
+            "\t\t",
+            "\t})",
+            "\t.catch((error) => {",
+            "\t\t",
+            "\t})"
+        ],
+        "description": "Firebase Firestore obtiene un documento"
+    },
+    "Firebase Firestore escuchar múltiples documentos en una colección": {
+        "prefix": "db.getSnapshot",
+        "body": [
+            "db.collection(\"${1:collectionName}\")",
+            "\t.onSnapshot((querySnapshot) => {",
+            "\t\tvar nuevo = [];",
+            "\t\tquerySnapshot.forEach((doc) => {",
+            "\t\t\tnuevo.push(doc.data().name);",
+            "\t\t});",
+            "\t});"
+        ],
+        "description": "Firebase Firestore escuchar múltiples documentos en una colección"
+    },
+    "Firebase Firestore escuchar múltiples documentos en una colección y mira cambios": {
+        "prefix": "db.onSnapshot",
+        "body": [
+            "db.collection(\"${1:collectionName}\")",
+            "\t.onSnapshot((snapshot) => {",
+            "\t\tsnapshot.docChanges().forEach((change) => {",
+            "\t\t\tif (change.type === \"added\") {",
+            "\t\t\t\tconsole.log(\"Nuevo: \", change.doc.data());",
+            "\t\t\t}",
+            "\t\t\tif (change.type === \"modified\") {",
+            "\t\t\t\tconsole.log(\"Modificado: \", change.doc.data());",
+            "\t\t\t}",
+            "\t\t\tif (change.type === \"removed\") {",
+            "\t\t\t\tconsole.log(\"Removido: \", change.doc.data());",
+            "\t\t\t}",
+            "\t\t});",
+            "\t});"
+        ],
+        "description": "Firebase Firestore escuchar múltiples documentos en una colección y mira cambios entre instantáneas"
     }
 }
