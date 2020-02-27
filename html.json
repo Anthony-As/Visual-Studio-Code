@@ -1,97 +1,600 @@
 {
-    "Bootstrap plantilla de inicio": {
-        "prefix": "html:bootstrap",
-        "body": [
-            "<!DOCTYPE html>",
-            "<html lang=\"es\">",
-            "\t<head>",
-            "\t\t<meta charset=\"UTF-8\" />",
-            "\t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\" />",
-            "\t\t<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.css\" />",
-            "\t\t<title>Documento</title>",
-            "\t</head>",
-            "\t<body>",
-            "\t\t<div class=\"container\">",
-            "\t\t\t<h1>Bootstrap</h1>",
-            "\t\t</div>",
-            "\t\t",
-            "\t\t<script src=\"https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.slim.js\"></script>",
-            "\t\t<script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.js\"></script>",
-            "\t\t<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.js\"></script>",
-            "\t</body>",
-            "</html>"
-        ],
-        "description": "Bootstrap plantilla de inicio HTML"
-    },
-    "Vuetify plantilla de inicio": {
-        "prefix": "html:vuetify",
-        "body": [
-            "<!DOCTYPE html>",
-            "<html lang=\"es\">",
-            "<head>",
-            "\t<link href=\"https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,,900\" rel=\"stylesheet\">",
-            "\t<link href=\"https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.,min.css\" rel=\"stylesheet\">",
-            "\t<link href=\"https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.css\" ,rel=\"stylesheet\">",
-            "\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, ,maximum-scale=1, user-scalable=no, minimal-ui\">",
-            "</head>",
-            "<body>",
-            "\t<div id=\"app\">",
-            "\t\t<v-app>",
-            "\t\t\t<v-content>",
-            "\t\t\t\t<v-container>Hola Mundo</v-container>",
-            "\t\t\t</v-content>",
-            "\t\t</v-app>",
-            "\t</div>",
-            "\t",
-            "\t<script src=\"https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js\"></script>",
-            "\t<script src=\"https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js\"></script>",
-            "\t<script>",
-            "\t\tnew Vue({",
-            "\t\tel: '#app',",
-            "\t\tvuetify: new Vuetify(),",
-            "\t})",
-            "\t</script>",
-            "</body>",
-            "</html>"
-        ],
-        "description": "Vuetify plantilla de inicio HTML"
-    },
-    // FIREBASE: CDN
-    "Firebase all products CDN": {
-        "prefix": "firebase-cdn-all",
-        "body": [
-            "<script src=\"https://www.gstatic.com/firebasejs/7.8.2/firebase-app.js\"></script>",
-            "",
-            "<script src=\"https://www.gstatic.com/firebasejs/7.8.2/firebase-auth.js\"></script>",
-            "<script src=\"https://www.gstatic.com/firebasejs/7.8.2/firebase-firestore.js\"></script>",
-            "<script src=\"https://www.gstatic.com/firebasejs/7.8.2/firebase-functions.js\"></script>",
-            "<script src=\"https://www.gstatic.com/firebasejs/7.8.2/firebase-storage.js\"></script>"
-        ],
-        "description": "Firebase todos los productos CDN"
-    },
-    "Firebase App CDN": {
-        "prefix": "firebase-cdn-app",
-        "body": "<script src=\"https://www.gstatic.com/firebasejs/7.8.2/firebase-app.js\"></script>",
-        "description": "CDN de la aplicación Firebase"
-    },
-    "Firebase Auth CDN": {
-        "prefix": "firebase-cdn-auth",
-        "body": "<script src=\"https://www.gstatic.com/firebasejs/7.8.2/firebase-auth.js\"></script>",
-        "description": "Firebase Auth CDN"
-    },
-    "Firebase Firestore CDN": {
-        "prefix": "firebase-cdn-firestore",
-        "body": "<script src=\"https://www.gstatic.com/firebasejs/7.8.2/firebase-firestore.js\"></script>",
-        "description": "Firebase Firestore CDN"
-    },
-    "Firebase Cloud Functions CDN": {
-        "prefix": "firebase-cdn-firestore",
-        "body": "<script src=\"https://www.gstatic.com/firebasejs/7.8.2/firebase-functions.js\"></script>",
-        "description": "Firebase Cloud Functions CDN"
-    },
-    "Firebase Storage CDN": {
-        "prefix": "firebase-cdn-storage",
-        "body": "<script src=\"https://www.gstatic.com/firebasejs/7.8.2/firebase-storage.js\"></script>",
-        "description": "Firebase Storage CDN"
-    }
+  "Vuetify plantilla de inicio": {
+    "prefix": "html:vuetify",
+    "body": [
+      "<!DOCTYPE html>",
+      "<html lang=\"es\">",
+      "<head>",
+      "\t<link href=\"https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,,900\" rel=\"stylesheet\">",
+      "\t<link href=\"https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.,min.css\" rel=\"stylesheet\">",
+      "\t<link href=\"https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.css\" ,rel=\"stylesheet\">",
+      "\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, ,maximum-scale=1, user-scalable=no, minimal-ui\">",
+      "</head>",
+      "<body>",
+      "\t<div id=\"app\">",
+      "\t\t<v-app>",
+      "\t\t\t<v-content>",
+      "\t\t\t\t<v-container>Hola Mundo</v-container>",
+      "\t\t\t</v-content>",
+      "\t\t</v-app>",
+      "\t</div>",
+      "\t",
+      "\t<script src=\"https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js\"></script>",
+      "\t<script src=\"https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js\"></script>",
+      "\t<script>",
+      "\t\tnew Vue({",
+      "\t\tel: '#app',",
+      "\t\tvuetify: new Vuetify(),",
+      "\t})",
+      "\t</script>",
+      "</body>",
+      "</html>"
+    ],
+    "description": "Vuetify plantilla de inicio HTML"
+  },
+  "Bootstrap plantilla de inicio": {
+    "prefix": "html:bootstrap",
+    "body": [
+      "<!DOCTYPE html>",
+      "<html lang=\"es\">",
+      "\t<head>",
+      "\t\t<meta charset=\"UTF-8\" />",
+      "\t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\" />",
+      "\t\t<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.css\" />",
+      "\t\t<title>Documento</title>",
+      "\t</head>",
+      "\t<body>",
+      "\t\t<div class=\"container\">",
+      "\t\t\t<h1>Bootstrap</h1>",
+      "\t\t</div>",
+      "\t\t",
+      "\t\t<script src=\"https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.slim.js\"></script>",
+      "\t\t<script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.js\"></script>",
+      "\t\t<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.js\"></script>",
+      "\t</body>",
+      "</html>"
+    ],
+    "description": "Bootstrap plantilla de inicio HTML"
+  },
+  "Firebase all products CDN": {
+    "prefix": "firebase-cdn-all",
+    "body": [
+      "<script src=\"https://www.gstatic.com/firebasejs/7.8.2/firebase-app.js\"></script>",
+      "",
+      "<script src=\"https://www.gstatic.com/firebasejs/7.8.2/firebase-auth.js\"></script>",
+      "<script src=\"https://www.gstatic.com/firebasejs/7.8.2/firebase-firestore.js\"></script>",
+      "<script src=\"https://www.gstatic.com/firebasejs/7.8.2/firebase-functions.js\"></script>",
+      "<script src=\"https://www.gstatic.com/firebasejs/7.8.2/firebase-storage.js\"></script>"
+    ],
+    "description": "Firebase todos los productos CDN"
+  },
+  "Firebase App CDN": {
+    "prefix": "firebase-cdn-app",
+    "body": "<script src=\"https://www.gstatic.com/firebasejs/7.8.2/firebase-app.js\"></script>",
+    "description": "CDN de la aplicación Firebase"
+  },
+  "Firebase Auth CDN": {
+    "prefix": "firebase-cdn-auth",
+    "body": "<script src=\"https://www.gstatic.com/firebasejs/7.8.2/firebase-auth.js\"></script>",
+    "description": "Firebase Auth CDN"
+  },
+  "Firebase Firestore CDN": {
+    "prefix": "firebase-cdn-firestore",
+    "body": "<script src=\"https://www.gstatic.com/firebasejs/7.8.2/firebase-firestore.js\"></script>",
+    "description": "Firebase Firestore CDN"
+  },
+  "Firebase Cloud Functions CDN": {
+    "prefix": "firebase-cdn-firestore",
+    "body": "<script src=\"https://www.gstatic.com/firebasejs/7.8.2/firebase-functions.js\"></script>",
+    "description": "Firebase Cloud Functions CDN"
+  },
+  "Firebase Storage CDN": {
+    "prefix": "firebase-cdn-storage",
+    "body": "<script src=\"https://www.gstatic.com/firebasejs/7.8.2/firebase-storage.js\"></script>",
+    "description": "Firebase Storage CDN"
+  },
+  "Lorem Picsum con ID de imagen específica": {
+    "prefix": "picsum",
+    "body": [
+      "<img src=\"https://picsum.photos/id/${1:684}/${2:600}/${3:400}\" alt=\"\">"
+    ],
+    "description": "Obtenga una imagen con ID, ancho y alto específicos"
+  },
+  "Lorem fotografías imagen plaza": {
+    "prefix": "picsum-square",
+    "body": [
+      "<img src=\"https://picsum.photos/id/${1:684}/${2:600}\" alt=\"\">"
+    ],
+    "description": "Obtén una imagen cuadrada"
+  },
+  "Lorem Picsum con tamaño de imagen og de Facebook": {
+    "prefix": "picsum-facebook-og-image",
+    "body": [
+      "<meta property=\"og:image\" content=\"https://picsum.photos/id/${1:684}/1200/630\" />"
+    ],
+    "description": "Obtenga una metaetiqueta con imagen en tamaño de gráfico abierto de Facebook"
+  },
+  "Lorem Picsum con efecto de escala de grises": {
+    "prefix": "picsum-grayscale",
+    "body": [
+      "<img src=\"https://picsum.photos/id/${1:684}/${2:600}/${3:400}?grayscale\" alt=\"\">"
+    ],
+    "description": "Obtener una imagen con efecto de escala de grises"
+  },
+  "Lorem fotografías con efecto de desenfoque": {
+    "prefix": "picsum-blur",
+    "body": [
+      "<img src=\"https://picsum.photos/id/${1:684}/${2:600}/${3:400}?blur=${4:5}\" alt=\"\">"
+    ],
+    "description": "Obtener una imagen con efecto de desenfoque"
+  },
+  "Lorem Picsum con escala de grises y efecto de desenfoque": {
+    "prefix": "picsum-grayscale-blur",
+    "body": [
+      "<img src=\"https://picsum.photos/id/${1:684}/${2:600}/${3:400}?grayscale&blur=5\" alt=\"\">"
+    ],
+    "description": "Obtenga una imagen con escala de grises y efecto de desenfoque"
+  },
+  "Image-1 Montaña Lorem las fotografías": {
+    "prefix": "picsum-mountain-1",
+    "body": [
+      "<img src=\"https://picsum.photos/id/684/${1:600}/${2:400}\" alt=\"\">"
+    ],
+    "description": "Obtener una imagen de montaña"
+  },
+  "Lorem fotografías imagen Montaña-2": {
+    "prefix": "picsum-mountain-2",
+    "body": [
+      "<img src=\"https://picsum.photos/id/231/${1:600}/${2:400}\" alt=\"\">"
+    ],
+    "description": "Obtener una imagen de montaña"
+  },
+  "Lorem-3 fotografías imagen Mountain": {
+    "prefix": "picsum-mountain-3",
+    "body": [
+      "<img src=\"https://picsum.photos/id/235/${1:600}/${2:400}\" alt=\"\">"
+    ],
+    "description": "Obtener una imagen de montaña"
+  },
+  "Lorem fotografías imagen Montaña-4": {
+    "prefix": "picsum-mountain-4",
+    "body": [
+      "<img src=\"https://picsum.photos/id/377/${1:600}/${2:400}\" alt=\"\">"
+    ],
+    "description": "Obtener una imagen de montaña"
+  },
+  "Lorem-5 fotos imagen Mountain": {
+    "prefix": "picsum-mountain-5",
+    "body": [
+      "<img src=\"https://picsum.photos/id/393/${1:600}/${2:400}\" alt=\"\">"
+    ],
+    "description": "Obtener una imagen de montaña"
+  },
+  "Imagen-6 Montaña Lorem las fotografías": {
+    "prefix": "picsum-mountain-6",
+    "body": [
+      "<img src=\"https://picsum.photos/id/906/${1:600}/${2:400}\" alt=\"\">"
+    ],
+    "description": "Obtener una imagen de montaña"
+  },
+  "Lorem fotografías imagen Montaña-7": {
+    "prefix": "picsum-mountain-7",
+    "body": [
+      "<img src=\"https://picsum.photos/id/908/${1:600}/${2:400}\" alt=\"\">"
+    ],
+    "description": "Obtener una imagen de montaña"
+  },
+  "Lorem fotografías imagen Montaña-8": {
+    "prefix": "picsum-mountain-8",
+    "body": [
+      "<img src=\"https://picsum.photos/id/961/${1:600}/${2:400}\" alt=\"\">"
+    ],
+    "description": "Obtener una imagen de montaña"
+  },
+  "Lorem fotografías imagen Montaña-9": {
+    "prefix": "picsum-mountain-9",
+    "body": [
+      "<img src=\"https://picsum.photos/id/327/${1:600}/${2:400}\" alt=\"\">"
+    ],
+    "description": "Obtener una imagen de montaña"
+  },
+  "Lorem fotografías imagen Valle": {
+    "prefix": "picsum-valley",
+    "body": [
+      "<img src=\"https://picsum.photos/id/564/${1:600}/${2:400}\" alt=\"\">"
+    ],
+    "description": "Obtener una imagen del valle"
+  },
+  "Imágenes Lorem las fotografías del oso": {
+    "prefix": "picsum-bear",
+    "body": [
+      "<img src=\"https://picsum.photos/id/1020/${1:600}/${2:400}\" alt=\"\">"
+    ],
+    "description": "Obtener una imagen del oso"
+  },
+  "Lorem fotografías imagen adorable perro": {
+    "prefix": "picsum-adorable-dog",
+    "body": [
+      "<img src=\"https://picsum.photos/id/1025/${1:600}/${2:400}\" alt=\"\">"
+    ],
+    "description": "Obtén una adorable imagen de perro"
+  },
+  "Imagen de perro negro de Lorem Picsum": {
+    "prefix": "picsum-black-dog",
+    "body": [
+      "<img src=\"https://picsum.photos/id/237/${1:600}/${2:400}\" alt=\"\">"
+    ],
+    "description": "Obtener una imagen de perro negro"
+  },
+  "Imagen del lago pacífico Lorem Picsum": {
+    "prefix": "picsum-peaceful-lake",
+    "body": [
+      "<img src=\"https://picsum.photos/id/1038/${1:600}/${2:400}\" alt=\"\">"
+    ],
+    "description": "Obtenga una imagen pacífica del lago"
+  },
+  "Vista de la ciudad Lorem fotografías imagen": {
+    "prefix": "picsum-city-view",
+    "body": [
+      "<img src=\"https://picsum.photos/id/1029/${1:600}/${2:400}\" alt=\"\">"
+    ],
+    "description": "Obtener una imagen de vista de la ciudad"
+  },
+  "Lorem fotografías escalera móvil": {
+    "prefix": "picsum-escalator",
+    "body": [
+      "<img src=\"https://picsum.photos/id/1033/${1:600}/${2:400}\" alt=\"\">"
+    ],
+    "description": "Obtener una imagen de la escalera mecánica"
+  },
+  "Lorem pics imagen instalación deportiva": {
+    "prefix": "picsum-sport-venue",
+    "body": [
+      "<img src=\"https://picsum.photos/id/1058/${1:600}/${2:400}\" alt=\"\">"
+    ],
+    "description": "Obtenga una imagen de lugar deportivo"
+  },
+  "Lorem las fotografías la imagen de la ciudad puesta de sol": {
+    "prefix": "picsum-city-sunset",
+    "body": [
+      "<img src=\"https://picsum.photos/id/1067/${1:600}/${2:400}\" alt=\"\">"
+    ],
+    "description": "Obtener una imagen del atardecer de la ciudad"
+  },
+  "Lorem una fotografías de imagen": {
+    "prefix": "picsum-vase",
+    "body": [
+      "<img src=\"https://picsum.photos/id/1068/${1:600}/${2:400}\" alt=\"\">"
+    ],
+    "description": "Obtener una imagen de florero"
+  },
+  "Imagen de trigo Lorem las fotografías": {
+    "prefix": "picsum-wheat",
+    "body": [
+      "<img src=\"https://picsum.photos/id/112/${1:600}/${2:400}\" alt=\"\">"
+    ],
+    "description": "Obtener una imagen de trigo"
+  },
+  "IMAGEN viaje Lorem las fotografías": {
+    "prefix": "picsum-traveler",
+    "body": [
+      "<img src=\"https://picsum.photos/id/177/${1:600}/${2:400}\" alt=\"\">"
+    ],
+    "description": "Obtener una imagen de viajero"
+  },
+  "Lorem fotografías ciervos imagen": {
+    "prefix": "picsum-deer",
+    "body": [
+      "<img src=\"https://picsum.photos/id/1003/${1:600}/${2:400}\" alt=\"\">"
+    ],
+    "description": "Obtener una imagen de venado"
+  },
+  "Lorem fotografías imagen Castillo": {
+    "prefix": "picsum-castle",
+    "body": [
+      "<img src=\"https://picsum.photos/id/1040/${1:600}/${2:400}\" alt=\"\">"
+    ],
+    "description": "Obtener una imagen del castillo"
+  },
+  "Lorem fotografías imagen Fresa": {
+    "prefix": "picsum-strawberry",
+    "body": [
+      "<img src=\"https://picsum.photos/id/1080/${1:600}/${2:400}\" alt=\"\">"
+    ],
+    "description": "Obtener una imagen de fresa"
+  },
+  "Lorem las fotografías de aire caliente ballon-1 imagen": {
+    "prefix": "picsum-hot-air-balloon-1",
+    "body": [
+      "<img src=\"https://picsum.photos/id/174/${1:600}/${2:400}\" alt=\"\">"
+    ],
+    "description": "Obtenga una imagen de globo de aire caliente"
+  },
+  "Lorem fotografías ballon-2 imagen de aire caliente": {
+    "prefix": "picsum-hot-air-balloon-2",
+    "body": [
+      "<img src=\"https://picsum.photos/id/401/${1:600}/${2:400}\" alt=\"\">"
+    ],
+    "description": "Obtenga una imagen de globo de aire caliente"
+  },
+  "Lorem las fotografías debido imagen": {
+    "prefix": "picsum-dew",
+    "body": [
+      "<img src=\"https://picsum.photos/id/189/${1:600}/${2:400}\" alt=\"\">"
+    ],
+    "description": "Obtener una imagen de rocío"
+  },
+  "Lorem fotografías imagen de la cámara": {
+    "prefix": "picsum-camera",
+    "body": [
+      "<img src=\"https://picsum.photos/id/250/${1:600}/${2:400}\" alt=\"\">"
+    ],
+    "description": "Obtener una imagen de cámara"
+  },
+  "Lorem fotografías imagen Torre Eiffel": {
+    "prefix": "picsum-eiffel-tower",
+    "body": [
+      "<img src=\"https://picsum.photos/id/318/${1:600}/${2:400}\" alt=\"\">"
+    ],
+    "description": "Obtener una imagen de la Torre Eiffel"
+  },
+  "Lorem fotos 1 de fomento de la imagen": {
+    "prefix": "picsum-building-1",
+    "body": [
+      "<img src=\"https://picsum.photos/id/1076/${1:600}/${2:400}\" alt=\"\">"
+    ],
+    "description": "Obtener una imagen del edificio"
+  },
+  "La construcción de Lorem-2 fotografías imagen": {
+    "prefix": "picsum-building-2",
+    "body": [
+      "<img src=\"https://picsum.photos/id/1081/${1:600}/${2:400}\" alt=\"\">"
+    ],
+    "description": "Obtener una imagen del edificio"
+  },
+  "Lorem-3 fotografías construcción de la imagen": {
+    "prefix": "picsum-building-3",
+    "body": [
+      "<img src=\"https://picsum.photos/id/743/${1:600}/${2:400}\" alt=\"\">"
+    ],
+    "description": "Obtener una imagen del edificio"
+  },
+  "La construcción de Lorem-4 fotos imagen": {
+    "prefix": "picsum-building-4",
+    "body": [
+      "<img src=\"https://picsum.photos/id/870/${1:600}/${2:400}\" alt=\"\">"
+    ],
+    "description": "Obtener una imagen del edificio"
+  },
+  "Lorem fotografías creación de una imagen-5": {
+    "prefix": "picsum-building-5",
+    "body": [
+      "<img src=\"https://picsum.photos/id/945/${1:600}/${2:400}\" alt=\"\">"
+    ],
+    "description": "Obtener una imagen del edificio"
+  },
+  "Lorem fotografías creación de una imagen-6": {
+    "prefix": "picsum-building-6",
+    "body": [
+      "<img src=\"https://picsum.photos/id/949/${1:600}/${2:400}\" alt=\"\">"
+    ],
+    "description": "Obtener una imagen del edificio"
+  },
+  "Lorem fotografías creación de una imagen-7": {
+    "prefix": "picsum-building-7",
+    "body": [
+      "<img src=\"https://picsum.photos/id/972/${1:600}/${2:400}\" alt=\"\">"
+    ],
+    "description": "Obtener una imagen del edificio"
+  },
+  "Image-1 Lorem las fotografías de ruta": {
+    "prefix": "picsum-road-1",
+    "body": [
+      "<img src=\"https://picsum.photos/id/182/${1:600}/${2:400}\" alt=\"\">"
+    ],
+    "description": "Obtener una imagen de carretera"
+  },
+  "Lorem fotografías imagen Camino-2": {
+    "prefix": "picsum-road-2",
+    "body": [
+      "<img src=\"https://picsum.photos/id/191/${1:600}/${2:400}\" alt=\"\">"
+    ],
+    "description": "Obtener una imagen de carretera"
+  },
+  "Lorem-3 fotografías imagen Camino": {
+    "prefix": "picsum-road-3",
+    "body": [
+      "<img src=\"https://picsum.photos/id/220/${1:600}/${2:400}\" alt=\"\">"
+    ],
+    "description": "Obtener una imagen de carretera"
+  },
+  "Lorem fotografías imagen Camino-4": {
+    "prefix": "picsum-road-4",
+    "body": [
+      "<img src=\"https://picsum.photos/id/242/${1:600}/${2:400}\" alt=\"\">"
+    ],
+    "description": "Obtener una imagen de carretera"
+  },
+  "Lorem fotografías imagen Camino-5": {
+    "prefix": "picsum-road-5",
+    "body": [
+      "<img src=\"https://picsum.photos/id/278/${1:600}/${2:400}\" alt=\"\">"
+    ],
+    "description": "Obtener una imagen de carretera"
+  },
+  "Imagen-6 Lorem las fotografías de ruta": {
+    "prefix": "picsum-road-6",
+    "body": [
+      "<img src=\"https://picsum.photos/id/314/${1:600}/${2:400}\" alt=\"\">"
+    ],
+    "description": "Obtener una imagen de carretera"
+  },
+  "Lorem personas las fotografías-1 imagen": {
+    "prefix": "picsum-people-1",
+    "body": [
+      "<img src=\"https://picsum.photos/id/548/${1:600}/${2:400}\" alt=\"\">"
+    ],
+    "description": "Obtener una imagen de personas"
+  },
+  "Imagen Lorem-2 pics personas": {
+    "prefix": "picsum-people-2",
+    "body": [
+      "<img src=\"https://picsum.photos/id/550/${1:600}/${2:400}\" alt=\"\">"
+    ],
+    "description": "Obtener una imagen de personas"
+  },
+  "Imagen Lorem-3 fotos gente": {
+    "prefix": "picsum-people-3",
+    "body": [
+      "<img src=\"https://picsum.photos/id/602/${1:600}/${2:400}\" alt=\"\">"
+    ],
+    "description": "Obtener una imagen de personas"
+  },
+  "Lorem personas pics-4 imagen": {
+    "prefix": "picsum-people-4",
+    "body": [
+      "<img src=\"https://picsum.photos/id/633/${1:600}/${2:400}\" alt=\"\">"
+    ],
+    "description": "Obtener una imagen de personas"
+  },
+  "Imagen Lorem-5 fotos gente": {
+    "prefix": "picsum-people-5",
+    "body": [
+      "<img src=\"https://picsum.photos/id/64/${1:600}/${2:400}\" alt=\"\">"
+    ],
+    "description": "Obtener una imagen de personas"
+  },
+  "Lorem fotos gente imagen-6": {
+    "prefix": "picsum-people-6",
+    "body": [
+      "<img src=\"https://picsum.photos/id/660/${1:600}/${2:400}\" alt=\"\">"
+    ],
+    "description": "Obtener una imagen de personas"
+  },
+  "Lorem fotos gente imagen-7": {
+    "prefix": "picsum-people-7",
+    "body": [
+      "<img src=\"https://picsum.photos/id/823/${1:600}/${2:400}\" alt=\"\">"
+    ],
+    "description": "Obtener una imagen de personas"
+  },
+  "Imagen Lorem-8 fotos gente": {
+    "prefix": "picsum-people-8",
+    "body": [
+      "<img src=\"https://picsum.photos/id/832/${1:600}/${2:400}\" alt=\"\">"
+    ],
+    "description": "Obtener una imagen de personas"
+  },
+  "Lorem personas las fotografías-9 imagen": {
+    "prefix": "picsum-people-9",
+    "body": [
+      "<img src=\"https://picsum.photos/id/839/${1:600}/${2:400}\" alt=\"\">"
+    ],
+    "description": "Obtener una imagen de personas"
+  },
+  "Imagen Lorem-10 pics personas": {
+    "prefix": "picsum-people-10",
+    "body": [
+      "<img src=\"https://picsum.photos/id/1011/${1:600}/${2:400}\" alt=\"\">"
+    ],
+    "description": "Obtener una imagen de personas"
+  },
+  "Imagen Lorem-11 pics personas": {
+    "prefix": "picsum-people-11",
+    "body": [
+      "<img src=\"https://picsum.photos/id/1012/${1:600}/${2:400}\" alt=\"\">"
+    ],
+    "description": "Obtener una imagen de personas"
+  },
+  "Imagen Lorem-12 pics personas": {
+    "prefix": "picsum-people-12",
+    "body": [
+      "<img src=\"https://picsum.photos/id/334/${1:600}/${2:400}\" alt=\"\">"
+    ],
+    "description": "Obtener una imagen de personas"
+  },
+  "Lorem fotografías imagen Café-1": {
+    "prefix": "picsum-cafe-1",
+    "body": [
+      "<img src=\"https://picsum.photos/id/1060/${1:600}/${2:400}\" alt=\"\">"
+    ],
+    "description": "Obtener una imagen de café"
+  },
+  "Lorem fotos Cafe-2 imagen": {
+    "prefix": "picsum-cafe-2",
+    "body": [
+      "<img src=\"https://picsum.photos/id/30/${1:600}/${2:400}\" alt=\"\">"
+    ],
+    "description": "Obtener una imagen de café"
+  },
+  "Lorem fotos Cafe-3 imagen": {
+    "prefix": "picsum-cafe-3",
+    "body": [
+      "<img src=\"https://picsum.photos/id/42/${1:600}/${2:400}\" alt=\"\">"
+    ],
+    "description": "Obtener una imagen de café"
+  },
+  "Lorem fotos Cafe-4 imagen": {
+    "prefix": "picsum-cafe-4",
+    "body": [
+      "<img src=\"https://picsum.photos/id/431/${1:600}/${2:400}\" alt=\"\">"
+    ],
+    "description": "Obtener una imagen de café"
+  },
+  "Lorem fotografías imagen Barco-1": {
+    "prefix": "picsum-boat-1",
+    "body": [
+      "<img src=\"https://picsum.photos/id/598/${1:600}/${2:400}\" alt=\"\">"
+    ],
+    "description": "Obtener una imagen del barco"
+  },
+  "Lorem fotografías imagen Barco-2": {
+    "prefix": "picsum-boat-2",
+    "body": [
+      "<img src=\"https://picsum.photos/id/642/${1:600}/${2:400}\" alt=\"\">"
+    ],
+    "description": "Obtener una imagen del barco"
+  },
+  "Lorem 3 fotografías barco-imagen": {
+    "prefix": "picsum-boat-3",
+    "body": [
+      "<img src=\"https://picsum.photos/id/211/${1:600}/${2:400}\" alt=\"\">"
+    ],
+    "description": "Obtener una imagen del barco"
+  },
+  "Lorem fotografías imagen vehículo-1": {
+    "prefix": "picsum-vehicle-1",
+    "body": [
+      "<img src=\"https://picsum.photos/id/514/${1:600}/${2:400}\" alt=\"\">"
+    ],
+    "description": "Obtener una imagen del vehículo"
+  },
+  "Lorem fotografías imagen de coche-2": {
+    "prefix": "picsum-vehicle-2",
+    "body": [
+      "<img src=\"https://picsum.photos/id/605/${1:600}/${2:400}\" alt=\"\">"
+    ],
+    "description": "Obtener una imagen del vehículo"
+  },
+  "Lorem 3 fotografías vehículo de la imagen": {
+    "prefix": "picsum-vehicle-3",
+    "body": [
+      "<img src=\"https://picsum.photos/id/655/${1:600}/${2:400}\" alt=\"\">"
+    ],
+    "description": "Obtener una imagen del vehículo"
+  },
+  "Lorem fotografías imagen vehículo-4": {
+    "prefix": "picsum-vehicle-4",
+    "body": [
+      "<img src=\"https://picsum.photos/id/670/${1:600}/${2:400}\" alt=\"\">"
+    ],
+    "description": "Obtener una imagen del vehículo"
+  },
+  "Lorem fotografías imagen vehículo-5": {
+    "prefix": "picsum-vehicle-5",
+    "body": [
+      "<img src=\"https://picsum.photos/id/111/${1:600}/${2:400}\" alt=\"\">"
+    ],
+    "description": "Obtener una imagen del vehículo"
+  }
 }
