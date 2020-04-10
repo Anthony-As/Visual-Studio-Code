@@ -1,327 +1,333 @@
 {
-  "Firebase initialize ": {
-    "prefix": "init:firebase",
-    "body": [
-      "import * as firebase from \"firebase/app\";",
-      "",
-      "import \"firebase/auth\";",
-      "import \"firebase/firestore\";",
-      "import \"firebase/functions\";",
-      "import \"firebase/storage\";",
-      "",
-      "const firebaseConfig = {",
-      "\tapiKey: \"api-key\",",
-      "\tauthDomain: \"project-id.firebaseapp.com\",",
-      "\tdatabaseURL: \"https://project-id.firebaseio.com\",",
-      "\tprojectId: \"project-id\",",
-      "\tstorageBucket: \"project-id.appspot.com\",",
-      "\tmessagingSenderId: \"sender-id\",",
-      "\tappId: \"app-id\",",
-      "\tmeasurementId: \"G-measurement-id\"",
-      "};",
-      "",
-      "firebase.initializeApp(firebaseConfig);"
-    ],
-    "description": "Inicialización de Firebase"
-  },
-  "Firebase Authentication initialize ": {
-    "prefix": "init:auth",
-    "body": "const db = firebase.auth();",
-    "description": "Inicialización de Firebase Authentication"
-  },
-  "Firebase Firestore initialize ": {
-    "prefix": "init:firestore",
-    "body": "const db = firebase.firestore();",
-    "description": "Inicialización de Firebase Firestore"
-  },
-  "Firebase Storage initialize ": {
-    "prefix": "init:storage",
-    "body": "const storage = firebase.storage();",
-    "description": "Inicialización de Firebase Storage"
-  },
-  "Firebase Functions initialize ": {
-    "prefix": "init:functions",
-    "body": "const storage = firebase.functions();",
-    "description": "Inicialización de Firebase Functions"
-  },
-  "Firebase Auth crear usuario con correo electrónico y contraseña ": {
-    "prefix": "auth.createUserWithEmailAndPassword",
-    "body": [
-      "auth.createUserWithEmailAndPassword(email, password)",
-      "\t.then((result) => {",
-      "\t\t",
-      "\t})",
-      "\t.catch((error) => {",
-      "\t\t",
-      "\t});"
-    ],
-    "description": "Firebase Auth crea un usuario con correo electrónico y contraseña"
-  },
-  "Firebase Auth inicia sesión con correo electrónico y contraseña ": {
-    "prefix": "auth.signInWithEmailAndPassword",
-    "body": [
-      "auth.signInWithEmailAndPassword(email, password)",
-      "\t.then((result) => {",
-      "\t\t",
-      "\t})",
-      "\t.catch((error) => {",
-      "\t\t",
-      "\t});"
-    ],
-    "description": "Firebase Auth inicia sesión con correo electrónico y contraseña"
-  },
-  "Firebase Auth en estado de autenticación cambiado ": {
-    "prefix": "auth.onAuthStateChanged",
-    "body": [
-      "auth.onAuthStateChanged((user) => {",
-      "\tif (user) {",
-      "\t\tvar displayName = user.displayName;",
-      "\t\tvar email = user.email;",
-      "\t\tvar emailVerified = user.emailVerified;",
-      "\t\tvar photoURL = user.photoURL;",
-      "\t\tvar isAnonymous = user.isAnonymous;",
-      "\t\tvar uid = user.uid;",
-      "\t\tvar providerData = user.providerData;",
-      "\t} else {",
-      "\t\t",
-      "\t}",
-      "});"
-    ],
-    "description": "Firebase Auth en estado de autenticación cambiado"
-  },
-  "Firebase Auth cerrar sesión ": {
-    "prefix": "auth.signOut",
-    "body": [
-      "auth.signOut()",
-      "\t.then(() => {",
-      "\t\t",
-      "\t}).catch((error) => {",
-      "\t\t",
-      "\t});"
-    ],
-    "description": "Cerrar sesión de Firebase Auth"
-  },
-  "Firebase Auth obtiene el usuario actual ": {
-    "prefix": "auth.currentUser",
-    "body": ["const user = firebase.auth().currentUser;"],
-    "description": "Firebase Auth obtiene usuario actual"
-  },
-  "Firebase Auth envía un correo electrónico de verificación al usuario actual ": {
-    "prefix": "auth.currentUser.sendEmailVerification",
-    "body": [
-      "auth.currentUser.sendEmailVerification()",
-      "\t.then(() => {",
-      "\t\t",
-      "\t}).catch((error) => {",
-      "\t\t",
-      "\t});"
-    ],
-    "description": "Firebase Auth envía un correo electrónico de verificación al usuario actual"
-  },
-  "Crear un proveedor de autenticación de Google Firebase Auth ": {
-    "prefix": "auth.GoogleAuthProvider",
-    "body": ["const provider = new firebase.auth.GoogleAuthProvider();"],
-    "description": "Crear un proveedor de autenticación de Google Firebase Auth"
-  },
-  "Crear un proveedor de autenticación de Facebook Firebase Auth ": {
-    "prefix": "auth.FacebookAuthProvider",
-    "body": ["const provider = new firebase.auth.FacebookAuthProvider();"],
-    "description": "Crear un proveedor de autenticación de Facebook Firebase Auth"
-  },
-  "Firebase Auth inicia sesión con Popup ": {
-    "prefix": "auth.signInWithPopup",
-    "body": [
-      "auth.signInWithPopup(provider)",
-      "\t.then((result) => {",
-      "\t\tconst token = result.credential.accessToken;",
-      "\t\tconst user = result.user;",
-      "\t})",
-      "\t.catch((error) => {",
-      "\t\t",
-      "\t});"
-    ],
-    "description": "Iniciar sesión en Firebase Auth con Popup"
-  },
-  "Firebase Firestore agrega un documento ": {
-    "prefix": "db.add",
-    "body": [
-      "db.collection(\"${1:collectionName}\")",
-      "\t.add(${2:obj})",
-      "\tthen((docRef) => {",
-      "\t\t",
-      "\t})",
-      "\t.catch((error) => {",
-      "\t\t",
-      "\t});"
-    ],
-    "description": "Firebase Firestore agrega un documento"
-  },
-  "Firebase Firestore estableció un documento ": {
-    "prefix": "db.set",
-    "body": [
-      "db.doc(\"${1:collectionName}/${2:docName}\")",
-      "\t.set(${3:obj})",
-      "\t.then(() => {",
-      "\t\t",
-      "\t})",
-      "\t.catch((error) => {",
-      "\t\t",
-      "\t})"
-    ],
-    "description": "Firebase Firestore estableció un documento"
-  },
-  "Firebase Firestore actualiza un documento ": {
-    "prefix": "db.update",
-    "body": [
-      "db.doc(\"${1:collectionName}/${2:docName}\")",
-      "\t.update(${3:obj})",
-      "\t.then(() => {",
-      "\t\t",
-      "\t})",
-      "\t.catch((error) => {",
-      "\t\t",
-      "\t})"
-    ],
-    "description": "Firebase Firestore actualiza un documento"
-  },
-  "Firebase Firestore elimina un documento ": {
-    "prefix": "db.delete",
-    "body": [
-      "db.doc(\"${1:collectionName}/${2:docName}\")",
-      "\t.delete()",
-      "\t.then(() => {",
-      "\t\t",
-      "\t})",
-      "\t.catch((error) => {",
-      "\t\t",
-      "\t})"
-    ],
-    "description": "Firebase Firestore borra un documento"
-  },
-  "Firebase Firestore obtiene una colección ": {
-    "prefix": "db.getCollection",
-    "body": [
-      "db.collection(\"${1:collectionName}\")",
-      "\t.get()",
-      "\t.then((querySnapshot) => {",
-      "\t\tquerySnapshot.forEach((doc) => {",
-      "\t\t\t",
-      "\t\t});",
-      "\t})",
-      "\t.catch((error) => {",
-      "\t\t",
-      "\t})"
-    ],
-    "description": "Firebase Firestore obtiene colección por una sola vez"
-  },
-  "Firebase Firestore obtiene la colección por pedido ": {
-    "prefix": "db.getCollectionByOrder",
-    "body": [
-      "db.collection('${1:collectionName}')",
-      "\t.orderBy(\"${2:id}\", \"${3:desc}\")",
-      "\t.get()",
-      "\t.then((querySnapshot) => {",
-      "\t\tquerySnapshot.forEach((doc) => {",
-      "\t\t\t",
-      "\t\t});",
-      "\t})",
-      "\t.catch((error) => {",
-      "\t\t",
-      "\t})"
-    ],
-    "description": "Firebase Firestore obtiene la colección por pedido"
-  },
-  "Firebase Firestore obtiene un documento ": {
-    "prefix": "db.getDoc",
-    "body": [
-      "db.doc(\"${1:collectionName}/${2:docName}\")",
-      "\t.get()",
-      "\t.then((doc) => {",
-      "\t\t",
-      "\t})",
-      "\t.catch((error) => {",
-      "\t\t",
-      "\t})"
-    ],
-    "description": "Firebase Firestore obtiene un documento"
-  },
-  "Firebase Firestore escuchar múltiples documentos en una colección": {
-    "prefix": "db.getSnapshot",
-    "body": [
-      "db.collection(\"${1:collectionName}\")",
-      "\t.onSnapshot((querySnapshot) => {",
-      "\t\tvar nuevo = [];",
-      "\t\tquerySnapshot.forEach((doc) => {",
-      "\t\t\tnuevo.push(doc.data().name);",
-      "\t\t});",
-      "\t});"
-    ],
-    "description": "Firebase Firestore escuchar múltiples documentos en una colección"
-  },
-  "Firebase Firestore escuchar múltiples documentos en una colección y mira cambios": {
-    "prefix": "db.onSnapshot",
-    "body": [
-      "db.collection(\"${1:collectionName}\")",
-      "\t.onSnapshot((snapshot) => {",
-      "\t\tsnapshot.docChanges().forEach((change) => {",
-      "\t\t\tif (change.type === \"added\") {",
-      "\t\t\t\tconsole.log(\"Nuevo: \", change.doc.data());",
-      "\t\t\t}",
-      "\t\t\tif (change.type === \"modified\") {",
-      "\t\t\t\tconsole.log(\"Modificado: \", change.doc.data());",
-      "\t\t\t}",
-      "\t\t\tif (change.type === \"removed\") {",
-      "\t\t\t\tconsole.log(\"Removido: \", change.doc.data());",
-      "\t\t\t}",
-      "\t\t});",
-      "\t});"
-    ],
-    "description": "Firebase Firestore escuchar múltiples documentos en una colección y mira cambios entre instantáneas"
-  },
-  "Firebase Storage agrega una referencia ": {
-    "prefix": "storageRef",
-    "body": "var storageRef = storage.ref();",
-    "description": "Firebase Firestore agrega una referencia"
-  },
-  "Firebase Storage crear una referencia secundaria": {
-    "prefix": "imagesRef",
-    "body": "var imagesRef = storageRef.child('images');",
-    "description": "Firebase Storage crear una referencia secundaria"
-  },
-  "Firebase Storage carga con monitoreo de progreso y manejo de errores": {
-    "prefix": "storageUploadTask",
-    "body": [
-      "var uploadTask = storageRef.child(\"images/imagen.jpg\").put(file);",
-      "",
-      "uploadTask.on(",
-      "\t\"state_changed\",",
-      "\t(snapshot) => {",
-      "\t\tvar progreso = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;",
-      "\t\tconsole.log(\"Subido al \" + progreso + \"%\");",
-      "\t},",
-      "\t(error) => {},",
-      "\t() => {",
-      "\t\tuploadTask.snapshot.ref.getDownloadURL().then((downloadURL) => {",
-      "\t\t\tconsole.log(\"Archivo disponible en \", downloadURL);",
-      "\t\t});",
-      "\t}",
-      ");"
-    ],
-    "description": "Firebase Storage escucha los cambios de estado, los errores y la finalización de la carga"
-  },
-  "Firebase Storage cree una referencia al archivo para elimina": {
-    "prefix": "storageDeleteRef",
-    "body": [
-      "var desertRef = storageRef.child(\"images/imagen.jpg\");",
-      "",
-      "desertRef.delete()",
-      "\t.then(() => {",
-      "\t\t",
-      "\t})",
-      "\t.catch((error) => {",
-      "\t\t",
-      "\t});"
-    ],
-    "description": "Firebase Storage cree una referencia al archivo para elimina"
-  }
+    "Firebase initialize ": {
+        "prefix": "init:firebase",
+        "body": [
+            "import * as firebase from \"firebase/app\";",
+            "",
+            "import \"firebase/auth\";",
+            "import \"firebase/firestore\";",
+            "import \"firebase/functions\";",
+            "import \"firebase/storage\";",
+            "",
+            "const firebaseConfig = {",
+            "\tapiKey: \"api-key\",",
+            "\tauthDomain: \"project-id.firebaseapp.com\",",
+            "\tdatabaseURL: \"https://project-id.firebaseio.com\",",
+            "\tprojectId: \"project-id\",",
+            "\tstorageBucket: \"project-id.appspot.com\",",
+            "\tmessagingSenderId: \"sender-id\",",
+            "\tappId: \"app-id\",",
+            "\tmeasurementId: \"G-measurement-id\"",
+            "};",
+            "",
+            "firebase.initializeApp(firebaseConfig);"
+        ],
+        "description": "Inicialización de Firebase"
+    },
+    "Firebase Authentication initialize ": {
+        "prefix": "init:auth",
+        "body": "const db = firebase.auth();",
+        "description": "Inicialización de Firebase Authentication"
+    },
+    "Firebase Firestore initialize ": {
+        "prefix": "init:firestore",
+        "body": "const db = firebase.firestore();",
+        "description": "Inicialización de Firebase Firestore"
+    },
+    "Firebase Storage initialize ": {
+        "prefix": "init:storage",
+        "body": "const storage = firebase.storage();",
+        "description": "Inicialización de Firebase Storage"
+    },
+    "Firebase Functions initialize ": {
+        "prefix": "init:functions",
+        "body": "const storage = firebase.functions();",
+        "description": "Inicialización de Firebase Functions"
+    },
+
+    "Firebase Auth crear usuario con correo electrónico y contraseña ": {
+        "prefix": "auth.createUserWithEmailAndPassword",
+        "body": [
+            "auth.createUserWithEmailAndPassword(email, password)",
+            "\t.then((result) => {",
+            "\t\t",
+            "\t})",
+            "\t.catch((error) => {",
+            "\t\t",
+            "\t});"
+        ],
+        "description": "Firebase Auth crea un usuario con correo electrónico y contraseña"
+    },
+    "Firebase Auth inicia sesión con correo electrónico y contraseña ": {
+        "prefix": "auth.signInWithEmailAndPassword",
+        "body": [
+            "auth.signInWithEmailAndPassword(email, password)",
+            "\t.then((result) => {",
+            "\t\t",
+            "\t})",
+            "\t.catch((error) => {",
+            "\t\t",
+            "\t});"
+        ],
+        "description": "Firebase Auth inicia sesión con correo electrónico y contraseña"
+    },
+    "Firebase Auth en estado de autenticación cambiado ": {
+        "prefix": "auth.onAuthStateChanged",
+        "body": [
+            "auth.onAuthStateChanged((user) => {",
+            "\tif (user) {",
+            "\t\tvar displayName = user.displayName;",
+            "\t\tvar email = user.email;",
+            "\t\tvar emailVerified = user.emailVerified;",
+            "\t\tvar photoURL = user.photoURL;",
+            "\t\tvar isAnonymous = user.isAnonymous;",
+            "\t\tvar uid = user.uid;",
+            "\t\tvar providerData = user.providerData;",
+            "\t} else {",
+            "\t\t",
+            "\t}",
+            "});"
+        ],
+        "description": "Firebase Auth en estado de autenticación cambiado"
+    },
+    "Firebase Auth cerrar sesión ": {
+        "prefix": "auth.signOut",
+        "body": [
+            "auth.signOut()",
+            "\t.then(() => {",
+            "\t\t",
+            "\t}).catch((error) => {",
+            "\t\t",
+            "\t});"
+        ],
+        "description": "Cerrar sesión de Firebase Auth"
+    },
+    "Firebase Auth obtiene el usuario actual ": {
+        "prefix": "auth.currentUser",
+        "body": ["const user = firebase.auth().currentUser;"],
+        "description": "Firebase Auth obtiene usuario actual"
+    },
+    "Firebase Auth envía un correo electrónico de verificación al usuario actual ": {
+        "prefix": "auth.currentUser.sendEmailVerification",
+        "body": [
+            "auth.currentUser.sendEmailVerification()",
+            "\t.then(() => {",
+            "\t\t",
+            "\t}).catch((error) => {",
+            "\t\t",
+            "\t});"
+        ],
+        "description": "Firebase Auth envía un correo electrónico de verificación al usuario actual"
+    },
+    "Crear un proveedor de autenticación de Google Firebase Auth ": {
+        "prefix": "auth.GoogleAuthProvider",
+        "body": ["const provider = new firebase.auth.GoogleAuthProvider();"],
+        "description": "Crear un proveedor de autenticación de Google Firebase Auth"
+    },
+    "Crear un proveedor de autenticación de Facebook Firebase Auth ": {
+        "prefix": "auth.FacebookAuthProvider",
+        "body": ["const provider = new firebase.auth.FacebookAuthProvider();"],
+        "description": "Crear un proveedor de autenticación de Facebook Firebase Auth"
+    },
+    "Firebase Auth inicia sesión con Popup ": {
+        "prefix": "auth.signInWithPopup",
+        "body": [
+            "auth.signInWithPopup(provider)",
+            "\t.then((result) => {",
+            "\t\tconst token = result.credential.accessToken;",
+            "\t\tconst user = result.user;",
+            "\t})",
+            "\t.catch((error) => {",
+            "\t\t",
+            "\t});"
+        ],
+        "description": "Iniciar sesión en Firebase Auth con Popup"
+    },
+    "Firebase Firestore agrega un documento ": {
+        "prefix": "db.add",
+        "body": [
+            "db.collection(\"${1:collectionName}\")",
+            "\t.add(${2:obj})",
+            "\tthen((docRef) => {",
+            "\t\t",
+            "\t})",
+            "\t.catch((error) => {",
+            "\t\t",
+            "\t});"
+        ],
+        "description": "Firebase Firestore agrega un documento"
+    },
+    "Firebase Firestore estableció un documento ": {
+        "prefix": "db.set",
+        "body": [
+            "db.doc(\"${1:collectionName}/${2:docName}\")",
+            "\t.set(${3:obj})",
+            "\t.then(() => {",
+            "\t\t",
+            "\t})",
+            "\t.catch((error) => {",
+            "\t\t",
+            "\t})"
+        ],
+        "description": "Firebase Firestore estableció un documento"
+    },
+    "Firebase Firestore actualiza un documento ": {
+        "prefix": "db.update",
+        "body": [
+            "db.doc(\"${1:collectionName}/${2:docName}\")",
+            "\t.update(${3:obj})",
+            "\t.then(() => {",
+            "\t\t",
+            "\t})",
+            "\t.catch((error) => {",
+            "\t\t",
+            "\t})"
+        ],
+        "description": "Firebase Firestore actualiza un documento"
+    },
+    "Firebase Firestore elimina un documento ": {
+        "prefix": "db.delete",
+        "body": [
+            "db.doc(\"${1:collectionName}/${2:docName}\")",
+            "\t.delete()",
+            "\t.then(() => {",
+            "\t\t",
+            "\t})",
+            "\t.catch((error) => {",
+            "\t\t",
+            "\t})"
+        ],
+        "description": "Firebase Firestore borra un documento"
+    },
+    "Firebase Firestore obtiene una colección ": {
+        "prefix": "db.getCollection",
+        "body": [
+            "db.collection(\"${1:collectionName}\")",
+            "\t.get()",
+            "\t.then((querySnapshot) => {",
+            "\t\tquerySnapshot.forEach((doc) => {",
+            "\t\t\t",
+            "\t\t});",
+            "\t})",
+            "\t.catch((error) => {",
+            "\t\t",
+            "\t})"
+        ],
+        "description": "Firebase Firestore obtiene colección por una sola vez"
+    },
+    "Firebase Firestore obtiene la colección por pedido ": {
+        "prefix": "db.getCollectionByOrder",
+        "body": [
+            "db.collection('${1:collectionName}')",
+            "\t.orderBy(\"${2:id}\", \"${3:desc}\")",
+            "\t.get()",
+            "\t.then((querySnapshot) => {",
+            "\t\tquerySnapshot.forEach((doc) => {",
+            "\t\t\t",
+            "\t\t});",
+            "\t})",
+            "\t.catch((error) => {",
+            "\t\t",
+            "\t})"
+        ],
+        "description": "Firebase Firestore obtiene la colección por pedido"
+    },
+    "Firebase Firestore obtiene un documento ": {
+        "prefix": "db.getDoc",
+        "body": [
+            "db.doc(\"${1:collectionName}/${2:docName}\")",
+            "\t.get()",
+            "\t.then((doc) => {",
+            "\t\t",
+            "\t})",
+            "\t.catch((error) => {",
+            "\t\t",
+            "\t})"
+        ],
+        "description": "Firebase Firestore obtiene un documento"
+    },
+    "Firebase Firestore escuchar múltiples documentos en una colección": {
+        "prefix": "db.getSnapshot",
+        "body": [
+            "db.collection(\"${1:collectionName}\")",
+            "\t.onSnapshot((querySnapshot) => {",
+            "\t\tvar nuevo = [];",
+            "\t\tquerySnapshot.forEach((doc) => {",
+            "\t\t\tnuevo.push(doc.data().name);",
+            "\t\t});",
+            "\t});"
+        ],
+        "description": "Firebase Firestore escuchar múltiples documentos en una colección"
+    },
+    "Firebase Firestore escuchar múltiples documentos en una colección y mira cambios": {
+        "prefix": "db.onSnapshot",
+        "body": [
+            "db.collection(\"${1:collectionName}\")",
+            "\t.onSnapshot((snapshot) => {",
+            "\t\tsnapshot.docChanges().forEach((change) => {",
+            "\t\t\tif (change.type === \"added\") {",
+            "\t\t\t\tconsole.log(\"Nuevo: \", change.doc.data());",
+            "\t\t\t}",
+            "\t\t\tif (change.type === \"modified\") {",
+            "\t\t\t\tconsole.log(\"Modificado: \", change.doc.data());",
+            "\t\t\t}",
+            "\t\t\tif (change.type === \"removed\") {",
+            "\t\t\t\tconsole.log(\"Removido: \", change.doc.data());",
+            "\t\t\t}",
+            "\t\t});",
+            "\t});"
+        ],
+        "description": "Firebase Firestore escuchar múltiples documentos en una colección y mira cambios entre instantáneas"
+    },
+    "Firebase Storage agrega una referencia ": {
+        "prefix": "storageRef",
+        "body": "var storageRef = storage.ref();",
+        "description": "Firebase Firestore agrega una referencia"
+    },
+    "Firebase Storage crear una referencia secundaria": {
+        "prefix": "imagesRef",
+        "body": "var imagesRef = storageRef.child('images');",
+        "description": "Firebase Firestore crear una referencia secundaria"
+    },
+    "Firebase Storage carga con monitoreo de progreso y manejo de errores": {
+        "prefix": "storageUploadTask",
+        "body": [
+            "var uploadTask = storageRef.child(\"images/imagen.jpg\").put(file);",
+            "",
+            "uploadTask.on(",
+            "\t\"state_changed\",",
+            "\t(snapshot) => {",
+            "\t\tvar progreso = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;",
+            "\t\tconsole.log(\"Subido al \" + progreso + \"%\");",
+            "\t},",
+            "\t(error) => {},",
+            "\t() => {",
+            "\t\tuploadTask.snapshot.ref.getDownloadURL().then((downloadURL) => {",
+            "\t\t\tconsole.log(\"Archivo disponible en \", downloadURL);",
+            "\t\t});",
+            "\t}",
+            ");"
+        ],
+        "description": "Firebase Firestore escucha los cambios de estado, los errores y la finalización de la carga"
+    },
+    "Firebase Storage cree una referencia al archivo para elimina": {
+        "prefix": "imagesRef",
+        "body": [
+            "var desertRef = storageRef.child(\"images/imagen.jpg\");",
+            "",
+            "desertRef.delete()",
+            "\t.then(() => {",
+            "\t\t",
+            "\t})",
+            "\t.catch((error) => {",
+            "\t\t",
+            "\t});"
+        ],
+        "description": "Firebase Firestore cree una referencia al archivo para elimina"
+    },
+    "Lorem Picsum con ID de imagen específica": {
+        "prefix": "picsum",
+        "body": ["<img src=\"https://picsum.photos/${2:720}/${3:360}\"/>"],
+        "description": "Obtenga una imagen con ancho y alto específicos"
+    }
 }
