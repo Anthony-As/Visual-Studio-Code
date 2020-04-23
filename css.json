@@ -1,0 +1,7 @@
+{
+    "CSS media queries": {
+        "prefix": "@media",
+        "body": ["@media screen and (min-width: ${1:768}px) {", "\t", "}"],
+        "description": "CSS Media queries para diferentes tamaños"
+    }
+}
